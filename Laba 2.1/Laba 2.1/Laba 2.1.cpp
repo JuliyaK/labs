@@ -16,9 +16,12 @@ int main()
 	cin >> M;
 		cout << "Enter a number N is even: \n" << endl;
 		cin >> N;
-	for (i = 2; i < 20; i++)
+	for (i = M; i < N; i++)
 		{
+			if (i % 2 == 0)
+			{
 				sum += str[i];
+			}
 		}
 	cout << "SUM : " << sum << endl;
 	getchar();
