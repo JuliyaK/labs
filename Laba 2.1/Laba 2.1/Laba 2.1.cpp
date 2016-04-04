@@ -8,14 +8,17 @@ using namespace std;
 int main()
 {
 	int M, N, i, sum;
-	cout << "Enter an even number from the keyboard : \n" << endl;
-	cin >> M, N; 
-	for (i = (M + 1); i < M; i++)
-		if (M >0 && N <= 20)
+	sum = 0;
+	char str[20];
+	cout << "Keep an even number: \n" << endl;
+	cin.getline(str, sizeof(str));
+	cout << "Enter a number M is even : \n" << endl;
+	cin >> M;
+		cout << "Enter a number N is even: \n" << endl;
+		cin >> N;
+	for (i = 2; i < 20; i++)
 		{
-			{
-				sum += i;
-			}
+				sum += str[i];
 		}
 	cout << "SUM : " << sum << endl;
 	getchar();
