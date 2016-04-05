@@ -1,4 +1,4 @@
-// Laba 2.1.cpp: главный файл проекта.
+// Вычислить сумму четных элементов 
 
 #include "stdafx.h"
 #include "iostream"
@@ -16,14 +16,12 @@ int main()
 	cin >> M;
 		cout << "Enter a number N is even: \n" << endl;
 		cin >> N;
-	for (i = M; i < N; i++)
-		{
-			if (i % 2 == 0)
-			{
+	for (i = M; i <= N; i++) {
+			if (str[i] % 2 == 0) {
 				sum += str[i];
 			}
 		}
-	cout << "SUM : " << sum << endl;
+	cout << "sum =  " << sum << endl;
 	getchar();
 	getchar();
 	return 0;
