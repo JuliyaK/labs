@@ -1,40 +1,41 @@
 #include "stdafx.h"
 #include "iostream"
-#include "math.h"
-#include "windows.h"
+#include "cmath"
 
 using namespace std;
 
-double f(int a, int n)
+int f(int a, int n)
 {
-	double rezult = 0;
+	int sum = 0;
 	int i;
 	for (i = 1; i < n; i++)
 	{
-		if (abs(a) <= 1)
+		if (fabs(a) <= 1)
 		{
-			rezult += ((double)a) / i;
+			sum += (a) / i;
 		}
 
 		else
 		{
-			rezult += ((double)a) / i*i;
+			sum += (a) / i*i;
 		}
 	}
 
-	return rezult;
+	return sum;
 }
 
 int main()
 {
 	int a, n;
-	cout << "Enter a,n\n";
-	cin >> a, n;
+	cout << "Enter a= \n";
+	cin >> a;
+	cout << "Enter n= \n";
+	cin >> n;
 	for (n = 5; n <= 8; n++)
 	{
 		for (a = -1; a <= 2; a++)
 		{
-			cout << "rezult a= n= \n", a, n, f(a, n);
+			cout << "\n\rf(a,n) = " << f(a, n);
 		}
 	}
 	getchar();
