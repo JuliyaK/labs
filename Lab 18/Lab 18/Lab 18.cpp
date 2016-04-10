@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-	float i;
-	float a[20];
+	int i;
+	int a[20];
 	int count = 0;
 
 	cout << "Array" << endl;
