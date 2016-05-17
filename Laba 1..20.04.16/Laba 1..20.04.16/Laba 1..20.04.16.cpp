@@ -19,9 +19,9 @@ int main()
 	cout << "3. Заполнение из текстового файла;";
 	cout << "4. Заполнение из бинарного файла;";
 	cout << "ваш выбор: ";
-	int imput;
-	cin >> imput;
-	switch (imput)
+	int input;
+	cin >> input;
+	switch (input)
 	{
 	case 1:
 		cout << "массив до сортировки: " << endl;
@@ -41,6 +41,7 @@ int main()
 
 	default:
 		break;
+	}
 	
 			for (l = 0; l < 7; l++)
 			{
