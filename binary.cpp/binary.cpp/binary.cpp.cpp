@@ -11,9 +11,9 @@ struct avto
 {
 	char marka[3]; //марка автомобиля
 	double year; //год выпуска
-	char name[15]; //имя владельца
-	char number[7]; //Гос нромер
-	char color[10]; //цвет автомобиля
+	char name[3]; //имя владельца
+	char number[3]; //Гос нромер
+	char color[3]; //цвет автомобиля
 };
 const char * file = "avto.dat";
 int main()
@@ -30,10 +30,10 @@ int main()
 		while (fin.read((char*)&av, sizeof av))
 		{
 			cout << setw(3) << av.marka << ": "
-				<< setprecision(0) << setw(8) << av.year
-				<< setw(15) << av.name
-				<< setw(7) << av.number
-				<< setw(10) << av.color;
+				<< setprecision(0) << setw(3) << av.year
+				<< setw(3) << av.name
+				<< setw(3) << av.number
+				<< setw(3) << av.color;
 		}
 		fin.close();
 	}
@@ -61,8 +61,6 @@ int main()
 	cin >> av.color;
 	eatline();
 	fout.write((char*)&av, sizeof av);
-	cout << "Enter marka avto:\n";
-	cin.get(av.marka, 3);
 	}
 	fout.close();
 	fin.clear();
@@ -73,10 +71,10 @@ int main()
 		while (fin.read((char*)&av, sizeof av))
 		{
 			cout << setw(3) << av.marka << ": "
-				<< setprecision(0) << setw(8) << av.year
-				<< setw(15) << av.name
-				<< setw(7) << av.number
-				<< setw(10) << av.color;
+				<< setprecision(0) << setw(3) << av.year
+				<< setw(3) << av.name
+				<< setw(3) << av.number
+				<< setw(3) << av.color;
 		}
 		fin.close();
 	}
