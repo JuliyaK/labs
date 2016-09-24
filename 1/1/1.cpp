@@ -9,35 +9,36 @@ using namespace std;
 
 int main()
 {
-	int i = 0;
+	int i;
 	string str1, str2;
 	fstream F;
-	ofstream ofs("D:\\f2.txt");
+	ofstream out("D:\\f2.txt");
 	F.open("D:\\f1.txt", ios::in);
 	{
 		while (!F.eof())
 		{
 			getline(F, str1);
-			cout << str1 << endl;
 			for (i = 0; i < str1.length(); i++)
 			{
-				if (str1[i] == 1)
+				if (str1[i] == '1')
 				{
-					str2[i] = 0;
+					str2 += '0';
+					continue;
 				}
-				if (str1[i] == 0)
+				if (str1[i] == '0')
 				{
-					str2[i] = 1;
+					str2 += '1';
+					continue;
 				}
 				else
 				{
-					str2[i] = str1[i];
+					str2 += str1[i];
 				}
 			}
-			cout << str2 << endl;
+			out << str2;
 		}
 		F.close();
-		ofs.close();
+		out.close();
 	}
 	getchar();
 	return 0;
